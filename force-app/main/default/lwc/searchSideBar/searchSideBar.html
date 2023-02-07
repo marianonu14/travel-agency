@@ -1,0 +1,45 @@
+<template>
+        <lightning-layout class="slds-grid slds-wrap slds-p-around_x-small">
+                <lightning-combobox
+                    class="slds-col slds-large-size_6-of-12 slds-p-around_x-small"
+                    name="progress"
+                    label="Select Origin"
+                    value={origin}
+                    placeholder="Select Origin"
+                    options={options}
+                    onchange={handleChangeOrigin} >
+                </lightning-combobox>
+                <lightning-combobox
+                    class="slds-col slds-large-size_6-of-12 slds-p-around_x-small"
+                    name="progress"
+                    label="Select Destination"
+                    value={destination}
+                    placeholder="Select Destination"
+                    options={options}
+                    onchange={handleChangeDestination} >
+                </lightning-combobox>
+                <lightning-input 
+                    class="slds-col slds-large-size_6-of-12 slds-p-around_x-small"
+                    type="date" 
+                    name="dateTime" 
+                    label="Depart" 
+                    value={departureDate}
+                    onchange={handleChangeDepDate}>
+                </lightning-input>
+                <lightning-input 
+                    class="slds-col slds-large-size_6-of-12 slds-p-around_x-small"
+                    type="date" 
+                    name="dateTime" 
+                    label="Return" 
+                    value={returnDate}
+                    onchange={handleChangeRetDate}>
+                </lightning-input>
+                <lightning-button 
+                    variant="destructive" 
+                    label="Show Flights"
+                    title="Primary action" 
+                    onclick={handleClickSearch} 
+                    class="slds-col slds-large-size_12-of-12 slds-p-around_x-small">
+            </lightning-button>
+        </lightning-layout>
+</template>

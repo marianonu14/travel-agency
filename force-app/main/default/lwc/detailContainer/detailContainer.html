@@ -1,0 +1,56 @@
+<template>
+    <h1 class="detail-title">Flights Detail Information</h1>
+    <template if:true={getValueFromParent}>
+        <lightning-layout class="gap">
+            <div style="width: 100%;">
+                <h2 class="f-bold" style="padding: .8rem;">Depart Travel</h2>
+                <div class="detail-container">
+                    <div>
+                        <h3 class="f-bold">Departure Time</h3>
+                        <p>{getValueFromParent.Origin__c}</p>
+                        <p>01:20</p>
+                    </div>
+                    <div style="margin: auto;">
+                        <lightning-icon 
+                            icon-name="utility:forward_up" 
+                            alternative-text="Utility image" 
+                            title="Image"
+                            style="--lwc-colorTextIconDefault: white;">
+                        </lightning-icon>
+                    </div>
+                    <div>
+                        <h3 class="f-bold">Arrival Time</h3>
+                        <p>{getValueFromParent.Destination__c}</p>
+                        <p>03:20</p>
+                    </div>
+                </div>
+            </div>
+            <div style="width: 100%;">
+                <h2 class="f-bold" style="padding: .8rem;">Return Travel</h2>
+                <div class="detail-container">
+                    <div>
+                        <h3 class="f-bold">Departure Time</h3>
+                        <p>{getValueFromParent.Destination__c}</p>
+                        <p>01:20</p>
+                    </div>
+                    <div style="margin: auto;">
+                        <lightning-icon 
+                            icon-name="utility:forward_up" 
+                            alternative-text="Utility image" 
+                            title="Image"
+                            style="--lwc-colorTextIconDefault: white;">
+                        </lightning-icon>
+                    </div>
+                    <div>
+                        <h3 class="f-bold">Arrival Time</h3>
+                        <p>{getValueFromParent.Origin__c}</p>
+                        <p>03:20</p>
+                    </div>
+                </div>
+            </div>
+        </lightning-layout>
+        <div class="slds-m-top_medium">
+            <lightning-button variant="destructive-text" label="Buy Tickets" title="Successful action" onclick={handleClick}></lightning-button>
+        </div>
+    </template>
+</template>
